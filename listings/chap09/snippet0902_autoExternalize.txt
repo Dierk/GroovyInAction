@@ -1,0 +1,14 @@
+class Composer implements Externalizable {
+    ...
+    void writeExternal(ObjectOutput out) throws IOException {
+        out.writeObject(name)
+        out.writeInt(born)
+        out.writeBoolean(married)
+    }
+
+    void readExternal(ObjectInput oin) {
+        name = (String) oin.readObject()
+        born = oin.readInt()
+        married = oin.readBoolean()
+    }
+}

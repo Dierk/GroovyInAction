@@ -1,0 +1,11 @@
+<plan>
+  <week capacity="8">
+    <task done="2" total="2" title="read XML chapter">easy</task>
+    <task done="3" total="3" title="try some reporting">fun</task>
+    <task done="1" total="2" title="use in current project"/>
+  </week>
+  <week capacity="8">
+    <task done="0" total="1" title="re-read DB chapter"/>
+    <task done="0" total="3" title="use DB/XML combination"/>
+  </week>
+</plan>

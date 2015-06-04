@@ -1,0 +1,89 @@
+import java.beans.*
+
+class Person {
+
+  private String name
+  private int age
+  final private PropertyChangeSupport this$propChangeSupport =
+      new PropertyChangeSupport(this)
+  final private VetoableChangeSupport this$vetoChangeSupport =
+      new VetoableChangeSupport(this)
+
+  void addPropertyChangeListener(PropertyChangeListener listener) {
+    this$propChangeSupport.addPropertyChangeListener(listener)
+  }
+
+  void addPropertyChangeListener(String name,
+                                 PropertyChangeListener listener) {
+    this$propChangeSupport.addPropertyChangeListener(name, listener)
+  }
+
+  void removePropertyChangeListener(PropertyChangeListener listener) {
+    this$propChangeSupport.removePropertyChangeListener(listener)
+  }
+
+  void removePropertyChangeListener(String name,
+                                    PropertyChangeListener listener) {
+    this$propChangeSupport.removePropertyChangeListener(name, listener)
+  }
+
+  void firePropertyChange(String name, oldValue, newValue) {
+    this$propChangeSupport.firePropertyChange(name, oldValue, newValue)
+  }
+
+  PropertyChangeListener[] getPropertyChangeListeners() {
+    return this$propChangeSupport.getPropertyChangeListeners()
+  }
+
+  PropertyChangeListener[] getPropertyChangeListeners(String name) {
+    return this$propChangeSupport.getPropertyChangeListeners(name)
+  }
+
+  void setName(String value) {
+    this.firePropertyChange('name', name, name = value )
+  }
+
+  void addVetoableChangeListener(VetoableChangeListener listener) {
+    this$vetoChangeSupport.addVetoableChangeListener(listener)
+  }
+
+  void addVetoableChangeListener(String name,
+                                 VetoableChangeListener listener) {
+    this$vetoChangeSupport.addVetoableChangeListener(name, listener)
+  }
+
+  void removeVetoableChangeListener(VetoableChangeListener listener) {
+    this$vetoChangeSupport.removeVetoableChangeListener(listener)
+  }
+
+  void removeVetoableChangeListener(String name,
+                                    VetoableChangeListener listener) {
+    this$vetoChangeSupport.removeVetoableChangeListener(name, listener)
+  }
+
+  void fireVetoableChange(String name, oldValue, newValue) {
+    this$vetoChangeSupport.fireVetoableChange(name, oldValue, newValue)
+  }
+
+  VetoableChangeListener[] getVetoableChangeListeners() {
+    return this$vetoChangeSupport.getVetoableChangeListeners()
+  }
+
+  VetoableChangeListener[] getVetoableChangeListeners(String name) {
+    return this$vetoChangeSupport.getVetoableChangeListeners(name)
+  }
+
+  void setAge(int value) throws PropertyVetoException {
+    this.fireVetoableChange('age', age, value)
+    age = value
+  }
+
+  String getName() {
+    name
+  }
+
+  int getAge() {
+    age
+  }
+
+}

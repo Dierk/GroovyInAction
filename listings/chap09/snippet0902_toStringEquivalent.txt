@@ -1,0 +1,51 @@
+import org.codehaus.groovy.runtime.InvokerHelper
+
+class SleuthExpanded {
+
+  String firstName
+  String lastName
+
+  String toString() {
+    def _result = new StringBuilder()
+    def $toStringFirst = true
+    _result.append('Sleuth(')
+
+    def firstName = InvokerHelper.getProperty(this, 'firstName')
+    if (firstName != null) {
+      if ($toStringFirst) {
+        $toStringFirst = false
+      } else {
+        _result.append(', ')
+      }
+      _result.append('firstName:')
+      if (firstName.is(this)) {
+        _result.append('(this)')
+      } else {
+        _result.append(InvokerHelper.toString(firstName))
+      }
+    }
+
+    def lastName = InvokerHelper.getProperty(this, 'lastName')
+    if (lastName != null) {
+      if ($toStringFirst) {
+        $toStringFirst = false
+      } else {
+        _result.append(', ')
+      }
+      _result.append('lastName:')
+      if (lastName.is(this)) {
+        _result.append('(this)')
+      } else {
+        _result.append(InvokerHelper.toString(lastName))
+      }
+    }
+    _result.append(')')
+    return _result.toString()
+  }
+
+}
+
+def nancy = new SleuthExpanded(firstName: 'Nancy', lastName: 'Drew')
+assert nancy.toString() == 'Sleuth(firstName:Nancy, lastName:Drew)'
+nancy.lastName = null
+assert nancy.toString() == 'Sleuth(firstName:Nancy)'

@@ -1,0 +1,16 @@
+class ScriptYYYYY extends Script {
+  List awe = [1, 2, 3]
+
+  public static void main(String[] args) {
+    new ScriptYYYYY().run()                      //#A
+  }
+
+  public awesum() {
+    awe.sum()
+  }
+
+  public run() {
+    assert awesum() == 6
+  }
+}
+//#A again slightly simplified

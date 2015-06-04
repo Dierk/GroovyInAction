@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Current Groovy progress</title>
+  </head>
+  <body>
+    <% weeks.eachWithIndex{ week, i -> %>
+    <h1>Week No. $i</h1>
+    <table cellspacing="5" >
+        <tbody>
+            <% ['capacity','total','done'].each{ attr -> %>
+            <tr>
+	            <td>$attr</td>
+	            <td>${week[attr]}</td>
+                <td>
+                    <div style=
+"border: thin solid #000000; width: ${week[attr]*scale}px">
+                        &nbsp;</div>
+                </td>
+	   	    </tr>
+            <% } // end of attribute %>
+	    </tbody>
+    </table>
+    <% } // end of week %>
+  </body>
+</html>

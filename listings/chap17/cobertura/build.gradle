@@ -1,0 +1,14 @@
+plugins {
+  id 'net.saliman.cobertura' version '2.2.6'
+}
+
+apply plugin: 'groovy'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.codehaus.groovy:groovy-all:2.4.0'
+  testCompile 'junit:junit:4.12'
+}

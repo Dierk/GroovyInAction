@@ -1,0 +1,14 @@
+import java.util.*;       // Java
+Date today = new Date();  // Java
+
+today = new Date()        // Groovy
+
+require 'date'             # Ruby
+today = Date.new           # Ruby
+
+import java.util._        // Scala
+var today = new Date      // Scala
+
+(import '(java.util Date)) ; Clojure
+(def today (new Date))     ; Clojure
+(def today (Date.))        ; Clojure alternative

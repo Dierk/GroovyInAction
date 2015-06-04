@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/groovy-2.4.0.rc-1"/>
+	<classpathentry kind="var" path="USER_HOME/.groovy/grapes/net.java.quickcheck/quickcheck/jars/quickcheck-0.6.jar"/>
+	<classpathentry kind="var" path="USER_HOME/.groovy/grapes/net.java.quickcheck/quickcheck-src-generator/jars/quickcheck-src-generator-0.6.jar"/>
+	<classpathentry kind="var" path="USER_HOME/.groovy/grapes/org.spockframework/spock-core/jars/spock-core-0.7-groovy-2.0.jar"/>
+	<classpathentry kind="var" path="USER_HOME/.groovy/grapes/junit/junit-dep/jars/junit-dep-4.10.jar"/>
+	<classpathentry kind="var" path="USER_HOME/.groovy/grapes/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="var" path="USER_HOME/.groovy/grapes/junitperf/junitperf/jars/junitperf-1.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/devtools/groovy-2.4.0/embeddable/groovy-all-2.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/devtools/groovy-2.4.0/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/devtools/groovy-2.4.0/lib/ant-1.9.4.jar"/>
+	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
+	<classpathentry kind="lib" path="C:/devtools/groovy-2.4.0/lib/ant-launcher-1.9.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

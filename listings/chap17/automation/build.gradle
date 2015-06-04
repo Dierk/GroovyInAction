@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:2.4.0"
+    testCompile "junit:junit:4.12"
+}
+
+task initProject () << {
+  if (hasProperty(initPlugins)) {
+    initPlugins.split(',').each { plug ->
+      project.apply {
+        plugin(plug.trim())
+      }
+    }
+  }
+
+  project.sourceSets*.allSource.srcDirTrees.flatten().dir.each { dir ->
+    dir.mkdirs()
+  }
+}

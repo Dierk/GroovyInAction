@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:lang="http://www.springframework.org/schema/lang"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/lang
+  http://www.springframework.org/schema/lang/spring-lang.xsd">
+<bean id="circle" class="spring.groovy.Circle">
+    <constructor-arg value="4"/>
+    <property name="color" value="Black"/>
+</bean>
+<!-- same beans.xml file used for three different scenarios -->
+<!-- uncomment the relevant section when working through snippets -->
+<!--
+<bean id="maxareainfo" class="spring.groovy.MaxAreaInfo"/>
+-->
+<lang:groovy id="maxareainfo2" script-source="classpath:MaxAreaInfo.groovy">
+    <lang:property name="prefix" value="Live Groovy says" />
+</lang:groovy>
+<!--
+<lang:groovy id="maxareainfo3" script-interfaces="spring.common.ShapeInfo" >
+    <lang:inline-script>
+    import spring.common.Shape
+    import spring.common.ShapeInfo
+
+    class SuffixMaxAreaInfo implements ShapeInfo {
+        String suffix
+        void displayInfo(Shape s1, Shape s2) {
+            print "The shape with the biggest area is: "
+            if (s1.area() > s2.area()) println s1 + ":" + suffix else println s2 + ":" + suffix
+        }
+    }
+    </lang:inline-script>
+    <lang:property name="suffix" value="Did you guess correctly?" />
+</lang:groovy>
+-->
+</beans>

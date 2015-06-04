@@ -1,0 +1,9 @@
+class Chef1 implements Cloneable, Serializable {
+  ...
+  Object clone() throws CloneNotSupportedException {
+    def baos = new ByteArrayOutputStream()
+    baos.withObjectOutputStream{ it.writeObject(this) }
+    def bais = new ByteArrayInputStream(baos.toByteArray())
+    bais.withObjectInputStream(getClass().classLoader){ it.readObject() }
+  }
+}

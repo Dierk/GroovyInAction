@@ -1,0 +1,11 @@
+class Chef1 implements Cloneable {
+    ...
+    Chef1 clone() throws CloneNotSupportedException {
+        Chef1 _result = (Chef1) super.clone()
+        if (recipes instanceof Cloneable) {
+            _result.recipes = (List<String>) recipes.clone()
+        }
+        _result.born = (Date) born.clone()
+        return _result
+    }
+}

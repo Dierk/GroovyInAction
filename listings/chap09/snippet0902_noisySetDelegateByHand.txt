@@ -1,0 +1,78 @@
+class NoisySet implements Set {
+    private Set delegate = new HashSet()
+
+    @Override
+    boolean add(item) {
+        println "adding $item"
+        delegate.add(item)
+    }
+
+    @Override
+    boolean addAll(Collection items) {
+        items.each { println "adding $it" }
+        delegate.addAll(items)
+    }
+
+    @Override
+    boolean isEmpty() {
+        return delegate.isEmpty()
+    }
+
+    @Override
+    boolean contains(Object o) {
+        return delegate.contains(o)
+    }
+
+    // ... ditto for size, iterator, toArray, remove,
+    // containsAll, retainAll, removeAll, clear ...
+
+    @Override
+    int size() {
+        return delegate.size()
+    }
+
+    @Override
+    Iterator iterator() {
+        return delegate.iterator()
+    }
+
+    @Override
+    Object[] toArray() {
+        return delegate.toArray()
+    }
+
+    @Override
+    def Object[] toArray(Object[] a) {
+        return delegate.toArray(a)
+    }
+
+    @Override
+    boolean remove(Object o) {
+        return delegate.remove(o)
+    }
+
+    @Override
+    boolean containsAll(Collection<?> c) {
+        return delegate.containsAll(c)
+    }
+
+    @Override
+    boolean retainAll(Collection<?> c) {
+        return delegate.retainAll(c)
+    }
+
+    @Override
+    boolean removeAll(Collection<?> c) {
+        return delegate.removeAll(c)
+    }
+
+    @Override
+    void clear() {
+        delegate.clear()
+    }
+}
+
+Set ns = new NoisySet()
+ns.add(1)
+ns.addAll([2, 3])
+assert ns.size() == 3

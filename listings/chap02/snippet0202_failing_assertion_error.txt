@@ -1,0 +1,12 @@
+Assertion failed:
+
+assert b == a + a                                      //#A
+       | |  | | |
+       9 |  5 | 5                                      //#B
+         |    10                                       //#C
+         false                                         //#C
+
+        at snippet22_failing_assert.run(snippet22_failing_assert.groovy:3)
+#A Expression is retained
+#B Referenced values
+#C Subexpression values

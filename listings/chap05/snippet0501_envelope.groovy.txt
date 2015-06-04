@@ -1,0 +1,2 @@
+Closure envelope = { person -> new Letter(person).send() }
+addressBook.each (envelope)

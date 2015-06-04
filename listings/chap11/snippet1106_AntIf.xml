@@ -1,0 +1,20 @@
+<project name="AntIf" default="main" >
+
+    <target name="check.java.version">
+        <condition property="java.version.ok">
+            <contains string="${java.version}" substring="1.4"/>
+        </condition>        
+        <fail unless="java.version.ok">
+            This build script requires JDK 1.4.x. 
+        </fail>
+    </target>
+
+    <target name="main" 
+        depends="check.java.version" 
+        if="java.version.ok">
+    
+        <!-- further action -->
+    
+    </target>
+
+</project>

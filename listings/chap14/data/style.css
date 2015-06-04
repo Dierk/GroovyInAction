@@ -1,0 +1,6 @@
+body {font-family:sans-serif;}
+h1 { font-size: large; }
+dl { padding-left: 10px}
+dt { font-weight:bold; }
+dt.finished { font-weight:normal; text-decoration:line-through; }
+dd {}

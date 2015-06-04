@@ -1,0 +1,9 @@
+class Greeter {
+  def greet() {
+    println "Hello from the greet() method!"
+  }
+
+  public static void main(String[] args) {
+    new Greeter().greet()
+  }
+}

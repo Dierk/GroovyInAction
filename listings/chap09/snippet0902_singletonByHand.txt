@@ -1,0 +1,6 @@
+class Zeus {
+    static final Zeus instance = new Zeus()
+    private Zeus() { }
+}
+
+assert Zeus.instance

@@ -1,0 +1,46 @@
+Matcher
+long size()
+int getCount()
+Object getAt( int idx)
+void setIndex( int idx)
+boolean hasGroup()
+
+Pattern
+boolean isCase(Object switchValue)
+
+String
+Pattern bitwiseNegate()
+
+String replaceFirst(Pattern pattern, String replacement)
+boolean matches(Pattern pattern)
+String minus(Object target) // if (target instanceof Pattern)
+Object splitEachLine(String regex) {match -> ... }
+
+String replaceAll(String regex) {match -> ... }
+String replaceAll(Pattern pattern, String replacement)
+
+String find(String regex)
+String find(Pattern pattern)
+
+String find(String regex) {match -> ... }
+String find(Pattern pattern) {match -> ... }
+
+List findAll(String regex)
+List findAll(Pattern pattern)
+
+List findAll(String regex) {match -> ... }
+List findAll(Pattern pattern) {match -> ... }
+
+String eachMatch(String regex) {match -> ... }
+String eachMatch(Pattern pattern) {match -> ... }
+
+File
+Object splitEachLine(String sep) {match -> ... }
+
+Reader
+Object splitEachLine(String sep) {match -> ... }
+
+InputStream
+Object splitEachLine(String sep, String charset) {match -> ... } 
+
+Object splitEachLine(String sep) {match -> ... } 

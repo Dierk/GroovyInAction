@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Think of a Number</title>
+  </head>
+  <body>
+    <h1>Think of a Number</h1>
+    <% if (guess) { %>
+    Your guess $guess is <%
+    switch (guess) {
+      case goal : out << 'correct!'; break
+      case {it < goal} : out << 'too low' ; break
+      case {it > goal} : out << 'too high'; break
+    }
+    } %>
+    <p>What&quot;s your guess (0..100)?</p>
+
+    <form action='Listing_12_22_TemplateGroovlet.groovy'>
+      <input type='text' name='guess'>
+      <button type='submit'>Guess</button>
+      <button type='submit' name='restart' value='true'>New Game
+      </button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+class ListUtil {
+    static reverse(List list) {
+        if (list.isEmpty()) list
+        else reverse(list.tail()) + list.head()
+    }
+}
+
+assert ListUtil.reverse(['a', 'b', 'c']) == ['c', 'b', 'a']
