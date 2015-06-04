@@ -7,5 +7,5 @@ withPool(tickers.size()) {
   def top = tickers.makeConcurrent()
       .collect { [ticker: it, price: getYearEndClosing(it, 2014)] }
       .max { it.price }
-  assert top == [ticker: 'GOOG', price: 526.4f]
+  assert top == [ticker: 'GOOG', price: 526.4024f]
 }

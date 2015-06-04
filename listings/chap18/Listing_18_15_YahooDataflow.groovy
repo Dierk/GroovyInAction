@@ -9,6 +9,6 @@ tickers.each { ticker ->
   task { price[ticker] = getYearEndClosing(ticker, 2014) }     //#A
 }
 def top = tickers.max { price[it] }                            //#B
-assert top == 'GOOG' && price[top] == 526.4f
+assert top == 'GOOG' && price[top] == 526.4024f
 //#A Set when available
 //#B Read sequentially
