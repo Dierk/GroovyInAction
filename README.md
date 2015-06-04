@@ -1,5 +1,5 @@
 # Groovy In Action
-Source code of the book Groovy in Action, 2nd edition
+Source code of the book [Groovy in Action, 2nd edition](http://www.manning.com/koenig2/)
 
 # Prerequisites
 
