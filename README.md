@@ -1,5 +1,5 @@
 # Groovy In Action
-Source code of the book [Groovy in Action, 2nd edition (manning,](http://www.manning.com/koenig2/?a_aid=regina)
+Source code of the book [Groovy in Action, 2nd edition (manning,](http://manning.com/koenig2/?a_aid=regina&a_bid=8ade3b0e)
 [amazon)](http://www.amazon.com/gp/product/1935182447/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1935182447&linkCode=as2&tag=httpgroovycan-20&linkId=XLTAIALXLIUBWPOH)
 
 # Prerequisites
