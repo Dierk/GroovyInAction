@@ -5,7 +5,7 @@ Source code of the book [Groovy in Action, 2nd edition (manning,](http://manning
 ### Use it? Star it!
 All source code is free for everybody's use under the Apache 2 license.
 
-If you want to do us a favor in return, please give this repo a "star" such that we can get at least a feeling of how many deverlopers are using it. _Thanks!_ 
+If you want to do us a favor in return, please give this repo a "star" such that we can get at least a feeling of how many developers are using it. _Thanks!_ 
 
 # Prerequisites
 
