@@ -34,7 +34,7 @@ If no other instructions apply, you best
 use Groovy 2.4.1 and Java 7. More recent versions
 will also work in most cases.
 
-There are code adaptions to Java 8. 
+There are code adaptions to Java 8.
 Please use the Java_8 branch if you rely on those.
 
 Keep groovin'
