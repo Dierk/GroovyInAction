@@ -12,3 +12,5 @@ converter.get(path: 'ConversionRate', query: params) { resp, data ->
 // => http://www.webservicex.net/CurrencyConvertor.asmx/ConversionRate?FromCurrency=USD&ToCurrency=EUR
 // => <double xmlns="http://www.webserviceX.NET/">0.882</double>
 // => 0.882
+
+// Apparently webservicex.net is having issues with their currency converter. Expect a ConversionRate of "-1".
