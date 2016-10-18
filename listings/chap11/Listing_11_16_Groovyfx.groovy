@@ -1,4 +1,4 @@
-@Grab('org.codehaus.groovyfx:groovyfx:0.3.1')
+@Grab('org.codehaus.groovyfx:groovyfx:0.4.0')
 
 import static groovyx.javafx.GroovyFX.start
 
