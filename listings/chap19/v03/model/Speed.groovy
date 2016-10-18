@@ -5,7 +5,7 @@ import groovy.transform.TupleConstructor
 @TupleConstructor
 class Speed {
   Number amount
-  Unit unit
+  DistanceUnit unit
 
   String toString() { "$amount $unit/h" }
 }

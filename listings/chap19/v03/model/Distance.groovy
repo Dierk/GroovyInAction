@@ -5,7 +5,7 @@ import groovy.transform.TupleConstructor
 @TupleConstructor
 class Distance {
   Number amount
-  Unit unit
+  DistanceUnit unit
 
   Speed div(Duration dur) {
     new Speed(amount, unit)
