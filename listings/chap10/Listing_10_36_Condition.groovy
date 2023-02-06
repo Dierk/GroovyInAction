@@ -16,4 +16,4 @@ void leastUpperBoundOnConditional() {
 //#2 Assign a String
 //#B Try to call o.time
 '''
-assert e.message.contains('No such property: time for class: java.io.Serializable')
+assert e.message.contains('No such property: time')

@@ -16,7 +16,7 @@ void testAssignmentsWithCoercion() {
     assert !empty
 
     Class stringClass = 'java.lang.String'          //#D
-    assert stringClass.interfaces.size() == 3
+    assert stringClass.interfaces.size() == 5
 }
 
 testAssignmentsWithCoercion()

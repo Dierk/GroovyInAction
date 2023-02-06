@@ -8,5 +8,5 @@ def e = shouldFail CompilationFailedException, '''
     }
 '''
 assert e.message.contains(
-    'No matching constructor found: java.awt.Dimension<init>(int)')
+    'No matching constructor found: java.awt.Dimension(int)')
 //#A Two parameters required. Compilation fails!

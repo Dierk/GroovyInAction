@@ -19,7 +19,8 @@ void testMessage() {
 '''
 println e.message.readLines().find{ it.contains('[Static ') }
 assert e.message.contains(
-    'Cannot call Logger#print(groovy.lang.Closure <java.lang.String>)' +
-        ' with arguments [groovy.lang.Closure <java.lang.Integer>]')
+    '[Static type checking] - ' +
+    'Cannot call Logger#print(groovy.lang.Closure<java.lang.String>) ' +
+    'with arguments [groovy.lang.Closure<java.lang.Integer>]')
 //#1 Passes
 //#2 Compilation fails

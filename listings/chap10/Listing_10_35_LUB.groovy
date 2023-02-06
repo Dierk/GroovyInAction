@@ -40,5 +40,5 @@ main()
 //#1 Try to assign 1st element to Owl
 //#2 Try to assign 2nd element to Person
 '''
-assert e.message.contains('Cannot assign value of type Polite to variable of type Owl')
-assert e.message.contains('Cannot assign value of type Polite to variable of type Person')
+assert e.message.contains('Cannot assign value of type (Polite or groovy.lang.GroovyObject) to variable of type Owl')
+assert e.message.contains('Cannot assign value of type (Polite or groovy.lang.GroovyObject) to variable of type Person')
