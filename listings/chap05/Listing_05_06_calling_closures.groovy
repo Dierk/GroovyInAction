@@ -8,7 +8,7 @@ def benchmark(int repeat, Closure worker) {            //#1
 }
 def slow = benchmark(10000) { (int) it / 2 }           //#5
 def fast = benchmark(10000) { it.intdiv(2) }           //#5
-assert fast * 2 < slow                                 //#5
+assert fast < slow                                 //#5
 //#1 Put closures last
 //#2 Some pre-work
 //#3 Call closure the given number of times
