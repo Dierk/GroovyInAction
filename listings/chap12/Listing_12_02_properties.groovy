@@ -10,7 +10,7 @@ def obj = new MyClass()
 assert obj.hasProperty('first')                 //|#1
 assert obj.respondsTo('myMethod')               //|#2
 
-def keys = ['first', 'second', 'class']
+def keys = ['first', 'third', 'class', 'second']
 assert obj.properties.keySet() == new HashSet(keys)
 
 assert 1 == obj.properties['first']             //|#3
