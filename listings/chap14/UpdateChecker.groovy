@@ -1,6 +1,6 @@
 class UpdateChecker {
   static check(text) {
-    def updated = new XmlParser().parseText(text)
+    def updated = new groovy.xml.XmlParser().parseText(text)
     updated.week[0].with { w0 ->
       assert w0.task.@done*.toInteger().sum() == 7
       assert w0.find{ it.text() == 'time saver' }

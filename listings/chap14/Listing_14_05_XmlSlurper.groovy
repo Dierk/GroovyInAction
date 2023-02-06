@@ -1,5 +1,5 @@
 //@Grab('org.codehaus.groovy:groovy-xml:2.2.0')
-def plan = new XmlSlurper().parse(new File('data/plan.xml'))
+def plan = new groovy.xml.XmlSlurper().parse(new File('data/plan.xml'))
 
 assert plan.week.task.size() == 5
 assert plan.week.task.@done*.toInteger().sum() == 6

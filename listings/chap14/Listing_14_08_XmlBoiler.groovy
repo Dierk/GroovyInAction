@@ -45,7 +45,7 @@ void htmlReport(builder, plan) {                     //#4
             dd("(${task.@done}/${task.@total}): ${task.@status}")
 } } } } } }
 
-def node = new XmlParser().parse(new File('data/plan.xml'))
+def node = new groovy.xml.XmlParser().parse(new File('data/plan.xml'))
 numberfy(node)                                       //#|5
 node.week.each { weekStatus(it) }                    //#|5
 

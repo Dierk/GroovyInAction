@@ -1,7 +1,7 @@
 //@Grab('org.codehaus.groovy:groovy-xml:2.2.0')
 import groovy.xml.XmlUtil
 
-def plan = new XmlParser().parse(new File('data/plan.xml'))
+def plan = new groovy.xml.XmlParser().parse(new File('data/plan.xml'))
 
 plan.week[0].task[2].@done = '2'
 plan.week[0].task[2].value = 'time saver'

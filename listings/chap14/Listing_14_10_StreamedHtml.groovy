@@ -17,7 +17,7 @@ def weekStatus(week) {                                       //#2
   return 'scheduled'
 }
 
-def plan = new XmlSlurper().parse(new File('data/plan.xml')) //#3
+def plan = new groovy.xml.XmlSlurper().parse(new File('data/plan.xml')) //#3
 
 Closure markup = {                                           //#4
   html {

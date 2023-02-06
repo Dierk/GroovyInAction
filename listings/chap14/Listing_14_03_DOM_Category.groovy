@@ -17,13 +17,9 @@ use(DOMCategory) {
   assert plan.week.task.'@done'*.toInteger().sum() == 6
   assert plan.week[1].task.every{ it.'@done' == '0' }
 
-// For legacy reasons, text nodes are regarded as children by
-// DOMCategory which yields slightly different code than for XmlParser
-// and XmlSlurper when using breadthFirst() and children() though
-// depthFirst() avoids these differences as it was introduced later
-  def elementNames = { it.nodeName.startsWith('#') ? [] : [it.name] }
-  assert plan.breadthFirst().iterator().collectMany(elementNames).join('->') ==
-      'plan->week->week->task->task->task->task->task'
+// depthFirst and breadthFirst treat text nodes differently
+  assert plan.breadthFirst()*.name().join('->') ==
+         'plan->week->week->task->task->task->task->task->#text->#text'
   assert plan.depthFirst()*.name().join('->') ==
       'plan->week->task->task->task->week->task->task'
   assert plan.'**'*.name().join('->') ==

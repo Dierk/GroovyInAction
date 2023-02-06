@@ -1,5 +1,5 @@
 //@Grab('org.codehaus.groovy:groovy-xml:2.2.0')
-def plan = new XmlParser().parse(new File('data/plan.xml'))    // #1
+def plan = new groovy.xml.XmlParser().parse(new File('data/plan.xml'))    // #1
 
 assert plan.name() == 'plan'
 assert plan.week[0].name() == 'week'
