@@ -1,5 +1,5 @@
 for (number in 1..20) {
-    def ant = new AntBuilder()
+    def ant = new groovy.ant.AntBuilder()
     def dir = 'listings/chap' + number.toString().padLeft(2, '0')
 
     def runner = "../../test"
