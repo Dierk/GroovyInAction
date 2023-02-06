@@ -14,7 +14,7 @@ assert out == 'Year 70 Month 0 Day 1'
 def tz = TimeZone.getTimeZone('GMT')
 def format = 'd MMM YYYY HH:mm:SS z'
 out = "Date is ${date.format(format, tz)} !"                  //#3
-assert out == 'Date is 1 Jan 1970 00:00:00 GMT !'
+assert out == 'Date is 1 Jan. 1970 00:00:00 GMT !'
 
                                                               //#4 start
 def sql = """
