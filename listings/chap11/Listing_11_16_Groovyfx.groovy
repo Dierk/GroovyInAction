@@ -1,3 +1,5 @@
+
+/*
 @Grab('org.codehaus.groovyfx:groovyfx:0.4.0')
 
 import static groovyx.javafx.GroovyFX.start
@@ -18,3 +20,7 @@ start {
     }
   }
 }
+*/
+
+println "WARNING: groovyfx does not work due to missing dependency"
+// TODO: fix groovyfx dependency
