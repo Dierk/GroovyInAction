@@ -1,5 +1,5 @@
 @Mixin(MessageFeature)
-class FirstTest extends GroovyTestCase {
+class FirstTest extends groovy.test.GroovyTestCase {
     void testWithMixinUsage() {
         message = "Called from Test"
         assertMessage "Called from Test"
