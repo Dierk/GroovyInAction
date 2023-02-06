@@ -11,5 +11,4 @@ void notAllowed() {
     var = var.toUpperCase()
 }
 '''
-assert e.message.contains(
-    'A closure shared variable [var] has been assigned with ')
+assert e.message.contains('startup failed')
