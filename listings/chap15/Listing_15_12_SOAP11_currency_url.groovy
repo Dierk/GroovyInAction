@@ -24,7 +24,7 @@ if (conn.responseCode != conn.HTTP_OK) {
    return
 }
 
-def resp   = new XmlParser().parse(conn.inputStream)            //#D
+def resp   = new groovy.xml.XmlParser().parse(conn.inputStream)            //#D
 def serv   = new Namespace('http://www.webserviceX.NET/')
 def result = serv.ConversionRateResult                          //#E
 

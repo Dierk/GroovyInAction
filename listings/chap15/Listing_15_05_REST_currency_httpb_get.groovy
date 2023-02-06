@@ -1,3 +1,5 @@
+
+/* http-builder currently uses an outdated version of GPathResult
 @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7.2')
 import groovyx.net.http.RESTClient
 
@@ -12,3 +14,6 @@ converter.get(path: 'ConversionRate', query: params) { resp, data ->
 // => http://www.webservicex.net/CurrencyConvertor.asmx/ConversionRate?FromCurrency=USD&ToCurrency=EUR
 // => <double xmlns="http://www.webserviceX.NET/">0.882</double>
 // => 0.882
+*/
+
+println "WARN: http-builder currently uses an outdated version of GPathResult "

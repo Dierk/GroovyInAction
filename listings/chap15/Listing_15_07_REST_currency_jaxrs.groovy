@@ -7,7 +7,7 @@ def response = client.target(base + '/ConversionRate')
     .queryParam("FromCurrency", "USD")
     .queryParam("ToCurrency", "EUR")
     .request().get(String)                             //#1
-def rate = new XmlSlurper().parseText(response)
+def rate = new groovy.xml.XmlSlurper().parseText(response)
 assert rate.name() == 'double'
 println rate.text()
 //#1 specify a String response

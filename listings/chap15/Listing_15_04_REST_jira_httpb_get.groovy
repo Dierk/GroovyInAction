@@ -1,5 +1,7 @@
 //@Grab('org.codehaus.groovy:groovy-xml:2.2.0')
 //@Grab('org.codehaus.groovy:groovy-json:2.2.0')
+
+/* http-builder currently uses an outdated version of GPathResult
 @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7.2')
 import groovyx.net.http.RESTClient
 
@@ -13,3 +15,6 @@ jira.get(path: 'issue/GROOVY-5999') { resp, json ->
     assert resolutiondate.startsWith('2013-02-14')
   }
 }
+*/
+
+println "WARN: http-builder currently uses an outdated version of GPathResult "

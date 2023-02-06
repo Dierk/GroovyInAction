@@ -20,7 +20,7 @@ def recipeXml = '''
 </recipe>
 '''
 
-def recipe  = new XmlSlurper().parseText(recipeXml)
+def recipe  = new groovy.xml.XmlSlurper().parseText(recipeXml)
 
 assert 4 == recipe.ingredients.ingredient.size()
 // should be 14 elements in total
@@ -39,7 +39,7 @@ assert recipe.steps.step.every{
 }
 
 
-def recipe2  = new XmlParser().parseText(recipeXml)
+def recipe2  = new groovy.xml.XmlParser().parseText(recipeXml)
 /* … processing steps … */
 def reader  = new StringReader(recipeXml)
 def doc     = groovy.xml.DOMBuilder.parse(reader)
