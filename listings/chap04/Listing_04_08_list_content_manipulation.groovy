@@ -1,11 +1,11 @@
 assert [1,[2,3]].flatten() == [1,2,3]
-assert [1,2,3].intersect([4,3,1])== [3,1]
+assert [1,2,3].intersect([4,3,1])== [1,3]
 assert [1,2,3].disjoint([4,5,6])
 
 list = [1,2,3]
 popped = list.pop()                                    //#1
-assert popped == 3
-assert list == [1,2]
+assert popped == 1   // pop and push are from the front!
+assert list == [2,3]
 
 assert [1,2].reverse() == [2,1]
 assert [3,1,2].sort() == [1,2,3]
