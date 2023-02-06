@@ -2,7 +2,7 @@ import groovy.transform.WithReadLock
 import java.util.concurrent.locks.ReentrantReadWriteLock
 import static java.lang.reflect.Modifier.*
 
-class ReadWriteLockTestWithNestedClass extends GroovyTestCase {
+class ReadWriteLockTestWithNestedClass extends groovy.test.GroovyTestCase {
 
   static class MyClass {                            //#A
     @WithReadLock

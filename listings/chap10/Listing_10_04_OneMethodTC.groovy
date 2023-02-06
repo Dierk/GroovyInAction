@@ -7,7 +7,7 @@ class Actor {
   String getFullName() { "$firstName $lastName" }         //#1
 
   void makePeace() {
-    new AntBuilder().echo('Peace was never an option')    //#2
+    new groovy.ant.AntBuilder().echo('Peace was never an option')    //#2
   }
 }
 

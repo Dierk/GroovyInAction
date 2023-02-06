@@ -1,7 +1,7 @@
 import java.util.concurrent.locks.ReentrantReadWriteLock
 import static java.lang.reflect.Modifier.*
 
-class ReadWriteLockTestClassLoader extends GroovyTestCase {
+class ReadWriteLockTestClassLoader extends groovy.test.GroovyTestCase {
 
   public void testLockFieldDefaultsForReadLock() {
     def tester = new GroovyClassLoader().parseClass('''

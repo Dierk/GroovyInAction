@@ -1,6 +1,6 @@
 import java.lang.reflect.Modifier
 
-class ReadWriteLockTestGroovyShell extends GroovyTestCase {
+class ReadWriteLockTestGroovyShell extends groovy.test.GroovyTestCase {
 
   public void testLockFieldDefaultsForReadLock() {
     def tester = new GroovyShell().evaluate('''
